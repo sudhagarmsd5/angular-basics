@@ -1,0 +1,13 @@
+.header {
+  background-color: cadetblue;
+  height: 37px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  height: 37px;
+}

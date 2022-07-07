@@ -1,0 +1,93 @@
+<div>
+  <h1 class="text-center">Sample example of Pipes</h1>
+  <div class="row">
+    <div>
+      <div>
+        <h3>1. UpperCasePipe</h3>
+        <p ngNonBindable>{{ "Welcome to Angular Pipes" | uppercase }}</p>
+        <p>{{ "Welcome to Angular Pipes" | uppercase }}</p>
+        <h3>2. LowerCasePipe</h3>
+        <p ngNonBindable>{{ "Welcome to Angular Pipes" | lowercase }}</p>
+        <p>{{ "Welcome to Angular Pipes" | lowercase }}</p>
+        <h3>3. TitleCasePipe</h3>
+        <p ngNonBindable>{{ "welcome to angular pipes" | titlecase }}</p>
+        <p>{{ "welcome to angular pipes" | titlecase }}</p>
+      </div>
+      <div>
+        <h3>4. DatePipe</h3>
+        <p ngNonBindable>{{ today | date }}</p>
+        <p>{{ today | date }}</p>
+        <p ngNonBindable>{{ today | date: "fullDate" }}</p>
+        <p>{{ today | date: "fullDate" }}</p>
+        <p ngNonBindable>{{ today | date: "shortTime" }}</p>
+        <p>{{ today | date: "shortTime" }}</p>
+        <p ngNonBindable>{{ today | date: "full" }}</p>
+        <p>{{ today | date: "full" }}</p>
+        <p ngNonBindable>{{ today | date: "yyyy-MM-dd HH:mm a z" }}</p>
+        <p>{{ today | date: "yyyy-MM-dd HH:mm a z" }}</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3>5. DecimalPipe</h3>
+        <p ngNonBindable>{{ 123456.14 | number }}</p>
+        <p>{{ 123456.14 | number }}</p>
+        <p ngNonBindable>{{ 1.3456 | number: "3.1-2" }}</p>
+        <p>{{ 1.3456 | number: "3.1-2" }}</p>
+        <p ngNonBindable>{{ 123456789 | number: "1.2-2" }}</p>
+        <p>{{ 123456789 | number: "1.2-2" }}</p>
+        <p ngNonBindable>{{ 1.2 | number: "4.5-5" }}</p>
+        <p>{{ 1.2 | number: "4.5-5" }}</p>
+      </div>
+      <div>
+        <h3>6. CurrencyPipe</h3>
+        <p ngNonBindable>{{ 1234567.5555 | currency }}</p>
+        <p>{{ 1234567.555 | currency }}</p>
+        <p ngNonBindable>{{ 1234567 | currency: "INR" }}</p>
+        <p>{{ 1234567 | currency: "INR" }}</p>
+        <p ngNonBindable>{{ 1234567 | currency: "CAD":"symbol":"1.2-5" }}</p>
+        <p>{{ 1234567 | currency: "CAD":"symbol":"1.2-5" }}</p>
+        <p ngNonBindable>
+          {{ 1234567 | currency: "CAD":"symbol-narrow":"1.2-5" }}
+        </p>
+        <p>{{ 1234567 | currency: "CAD":"symbol-narrow":"1.2-5" }}</p>
+        <p ngNonBindable>
+          {{ 1234567.555 | currency: "INR":"symbol":"1.0-0" }}
+        </p>
+        <p>{{ 1234567.555 | currency: "INR":"symbol":"1.0-0" }}</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3>7. PercentPipe</h3>
+        <p ngNonBindable>{{ 0.25645 | percent }}</p>
+        <p>{{ 0.25645 | percent }}</p>
+        <p ngNonBindable>{{ 0.25645 | percent: "3.1-5" }}</p>
+        <p>{{ 0.25645 | percent: "3.1-5" }}</p>
+        <p ngNonBindable>{{ 0.25645 | percent: "1.5-5" }}</p>
+        <p>{{ 0.25645 | percent: "1.5-5" }}</p>
+      </div>
+      <div>
+        <h3>8. SlicePipe</h3>
+        <p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice: 2 }}</p>
+        <p>{{ [1, 2, 3, 4, 5, 6] | slice: 2 }}</p>
+        <p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice: 2:4 }}</p>
+        <p>{{ [1, 2, 3, 4, 5, 6] | slice: 2:4 }}</p>
+        <p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice: 1:-2 }}</p>
+        <p>{{ [1, 2, 3, 4, 5, 6] | slice: 1:-2 }}</p>
+        <p ngNonBindable>{{ languages | slice: 2:5 }}</p>
+        <p>{{ languages | slice: 2:5 }}</p>
+      </div>
+      <div>
+        <h3>9. JsonPipe</h3>
+        <p ngNonBindable>{{ data | json }}</p>
+        <p>{{ data | json }}</p>
+      </div>
+      <div>
+        <h3>10. AsyncPipe</h3>
+        <p ngNonBindable>{{ time | async }}</p>
+        <p>{{ time | async }}</p>
+      </div>
+    </div>
+  </div>
+</div>

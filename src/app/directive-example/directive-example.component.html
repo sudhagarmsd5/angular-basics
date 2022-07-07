@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="ngif">
+    <h1>Simple Example of ngIf</h1>
+    
+    <div>Show <input type="checkbox" [(ngModel)]="showMe" /></div>
+
+    <h3>ngIf</h3>
+
+    <p *ngIf="showMe">ShowMe is checked</p>
+    <p *ngIf="!showMe">ShowMe is unchecked</p>
+    <br />
+
+    <h3>ngIf Else</h3>
+
+    <p *ngIf="showMe; else elseBlock1">ShowMe is checked</p>
+
+    <ng-template #elseBlock1>
+      <p>ShowMe is unchecked Using elseBlock</p>
+    </ng-template>
+    <br />
+    <h3>ngIf then else</h3>
+
+    <p *ngIf="showMe; then thenBlock2; else elseBlock2">This is not rendered</p>
+
+    <ng-template #thenBlock2>
+      <p>ShowMe is checked Using thenblock</p>
+    </ng-template>
+
+    <ng-template #elseBlock2>
+      <p>ShowMe is unchecked Using elseBlock</p>
+    </ng-template>
+    <br />
+
+    <h3>using hidden</h3>
+
+    <p [hidden]="showMe">
+      content to render, when the condition is true using hidden property
+      binding
+    </p>
+
+    <p [hidden]="!showMe">
+      content to render, when the condition is false. using hidden property
+      binding
+    </p>
+  </div>
+  <div class="ngfor">
+    <h1>Simple example of ngFor</h1>
+
+    <h3>{{ title }}</h3>
+    
+    <ul>
+      <li *ngFor="let movie of movies">{{ movie.title }} - {{ movie.director }}</li>
+    </ul>
+    
+  </div>
+  <div class="switch">
+    <h1>Simple example of ngSwitch</h1>
+      <div>
+        Input string : <input type="text" [(ngModel)]="num" />
+        <div [ngSwitch]="num">
+          <div *ngSwitchCase="'1'">One</div>
+          <div *ngSwitchCase="'2'">Two</div>
+          <div *ngSwitchCase="'3'">Three</div>
+          <div *ngSwitchCase="'4'">Four</div>
+          <div *ngSwitchCase="'5'">Five</div>
+          <div *ngSwitchDefault>This is Default</div>
+        </div>
+      </div>
+  </div>
+</div>
